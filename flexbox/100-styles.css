@@ -355,11 +355,11 @@ ul.row {
       ============================= */
 
 .nav {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
-  display: flex;
 }
 
 .nav .nav-item {
@@ -407,7 +407,7 @@ ul.row {
   padding: var(--header-padding);
   position: relative;
   z-index: 3;
-  background: transparent;
+  background: transparent !important;
 }
 
 .header-container {
@@ -533,19 +533,21 @@ ul.row {
 }
 
 /* Section Latest news
-      ============================= */
+    ============================= */
+
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
 
 /* Section SERVICES
-      ============================= */
+    ============================= */
 
 .section-services .row {
   flex-wrap: wrap;
 }
 
-/* Section ABOUT US ============================= */
+/* Section ABOUT US
+    ============================= */
 
 .section-about-us [class*='col-'] {
   align-self: center;
@@ -692,10 +694,10 @@ ul.row {
   content: '';
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   left: 0;
-  top: 0;
+  bottom: 0;
   z-index: 0;
 }
 
@@ -722,25 +724,8 @@ ul.row {
   display: flex;
 }
 
-.post img {
-  width: 100%;
-  height: auto;
-}
-
 .post-content {
   width: 100%;
-}
-
-.post-content p:first-child {
-  font-size: var(--font-size-x-large);
-}
-
-.post-content .img-caption {
-  margin: 1rem 0;
-  padding: 0 0.5rem;
-  font-size: var(--font-size-small);
-  color: var(--color-grey);
-  text-align: center;
 }
 
 .post-aside {
@@ -762,7 +747,13 @@ ul.row {
   display: block;
 }
 
-.post-meta-list [class*='post-meta'] {
+.post-meta-list [class*='post-meta-'] {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid var(--color-light-grey);
+}
+
+.post-meta-list [class*='post-meta']:last-child {
   border: none;
   margin-bottom: 3rem;
 }
@@ -776,7 +767,7 @@ ul.row {
 }
 
 .tag-list li {
-  display: inline-block;
+  display: inline;
 }
 
 .tag-list li::after {
@@ -784,5 +775,22 @@ ul.row {
 }
 
 .tag-list li:last-child::after {
-  content: ''; /* remove comma after last tag item */
+  content: '';
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post-content + p {
+  font-size: var(--font-size-x-large);
+}
+
+.post-content .img-caption {
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+  font-size: var(--font-size-small);
+  color: var(--color-grey);
+  text-align: center;
 }
