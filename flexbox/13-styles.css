@@ -773,5 +773,5 @@ ul.row {
 }
 
 .tag-list li:last-child::after {
-  content: ''; /* remove comma after last tag item */
+  content: '';
 }
