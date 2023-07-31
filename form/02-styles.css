@@ -822,7 +822,7 @@ form {
   margin: 0;
 }
 
-form fieldset {
+fieldset {
   border: none;
   display: flex;
   flex-direction: column;
