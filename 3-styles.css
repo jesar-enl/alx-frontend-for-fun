@@ -69,3 +69,7 @@ body {
 .menu-open:checked + .menu-open-button .menu-line-3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
+.menu-open:checked ~ .menu-item {
+  display: block;
+}
